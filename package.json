@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open --browser chrome",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cy:run": "npx cypress run --config video=false --env allure=true --browser chrome --headless",
+    "allure:clear": "if exist allure-results rmdir /q /s allure-results && if exist allure-report rmdir /q /s allure-report && if exist cypress/screenshots rmdir /q /s cypress/screenshots && if exist cypress/videos rmdir /q /s cypress/videos",
+    "run:debug": "npx cypress run --env allure=true",
+    "dev": "npm run allure:clear && npm run cy:run",
+    "cypress:critical": "npx cypress run --env grepTags=critico,allure=true --config video=false --browser chrome --headless"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.8.3",
+    "concurrently": "^6.2.0",
+    "cypress": "^8.0.0",
+    "cypress-grep": "^2.5.2",
+    "cypress-ntlm-auth": "^3.2.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "cpf-cnpj-validator": "^1.0.3"
+  }
+}

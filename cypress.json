@@ -1,0 +1,6 @@
+{
+    "baseUrl":"http://demo.automationtesting.in/Register.html",
+    "chromeWebSecurity": false,
+    "viewportHeight": 1024,
+    "viewportWidth": 1080
+}
